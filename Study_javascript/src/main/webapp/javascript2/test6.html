@@ -27,8 +27,28 @@
 	
 	function startNumberGame() {
 		var correctNum = 10; // 정답을 저장하는 변수
+		var count = 0;
+		var num = 0;
+		while(true) {
+			count++;
+			num = prompt("숫자를 입력해 주세요");
+			if(correctNum == num) {
+				alert("정답입니다.");
+				document.write(count + "번만에 정답!");
+				return;
+			} else {
+				if(correctNum > num) {
+					alert("입력받은 숫자보다 큽니다!");
+				} else if(correctNum < num) {
+					alert("입력받은 숫자보다 작습니다!");
+				}
+			}
+		}
 		
 	}
+	
+	startNumberGame();
+	
 	
 </script>
 </head>
