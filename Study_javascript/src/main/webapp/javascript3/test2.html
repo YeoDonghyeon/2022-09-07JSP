@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var nums = ["one", "two", "three", "four"];
+	var nums = Array("one", "two", "three", "four");
+	
+	for(let i = 0; i < nums.length; i++) {
+		document.write("nums : " + nums[i] + "<br>");
+	}
+	
+	var fruitsArr = ["사과", "딸기", "바나나"];
+	
+	for(let i = 0; i < fruitsArr.length; i++) {
+		document.write(i + "번째 요소 : " + fruitsArr[i] + " ");
+	}
+	document.write("<br>");
+	
+	for(let element of fruitsArr) {
+		document.write("for .... of 문 사용한 배열 요소 : " + element + "<br>");
+	}
+	
+	fruitsArr[3] = "레몬";
+	document.write("추가 후 fruitsArr 배열 크기 : " + fruitsArr.length + "<br>");
+	document.write("추가 후 fruitsArr 배열 데이터 : " + fruitsArr + "<br>");
+	
+// 	fruitsArr.length = 10;
+// 	document.write("변경 후 fruitsArr 배열 크기 : " + fruitsArr.length + "<br>");
+// 	document.write("변경 후 fruitsArr 배열 데이터 : " + fruitsArr + "<br>");
+	
+// 	fruitsArr.length = 0;
+// 	document.write("초기화 후 fruitsArr 배열 크기 : " + fruitsArr.length + "<br>");
+// 	document.write("초기화 후 fruitsArr 배열 데이터 : " + fruitsArr + "<br>");
+	
+// 	1. 삭제
+// 	delete fruitsArr[2];
+// 	document.write("요소 삭제 후(delete) fruitsArr 배열 데이터 : " + fruitsArr + "<br>");
+	
+// 	2. splice() 로 삭제해보기
+	fruitsArr.splice(2, 1);
+	document.write("요소 삭제 후(splice()) fruitsArr 배열 데이터 : " + fruitsArr + "<br>");
+	
+// 	3. slice() 기능
+	var arr = [1, 2, 3, 4, 5];
+	var arrSlice = arr.slice(1, 3);
+	document.write("slice() 함수 호출 결과 : " + arrSlice + "<br>");
+	
+	var arrAllType = ["글자", 3.14, true, 10, function() {alert("배열 내의 함수");} ];
+	
+	for(var item of arrAllType) {
+		document.write(arrAllType + "<br>");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>
